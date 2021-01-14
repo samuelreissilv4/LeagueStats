@@ -19,7 +19,7 @@ def rankInvocador(id):
 
 nome = input("Insira o nome no jogador: ")
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     try:
         invocador = dadosInvocador(nome)
         print("Jogador:" + invocador['name'])
