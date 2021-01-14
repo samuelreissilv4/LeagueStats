@@ -1,6 +1,7 @@
 import requests
+from APIkey import getApiKey
 
-APIKey = "RGAPI-9467f77d-9dce-4b1b-8df1-80f6aadab6ba"
+APIKey = getApiKey()
 
 
 def dadosInvocador(nome):
@@ -17,10 +18,9 @@ def rankInvocador(id):
     return dados.json()
 
 
-nome = input("Insira o nome no jogador: ")
-
-if __name__ == '_main_':
+if __name__ == '__main__':
     try:
+        nome = input("Insira o nome no jogador: ")
         invocador = dadosInvocador(nome)
         print("Jogador:" + invocador['name'])
         rank = rankInvocador(invocador['id'])
